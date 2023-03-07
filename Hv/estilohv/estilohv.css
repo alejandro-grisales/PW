@@ -42,3 +42,21 @@ bottom: 14.45%;
 
 background: #86A7BB;
     }
+
+    .h1{
+        position: absolute;
+left: 3.96%;
+right: 74.72%;
+top: 3.61%;
+bottom: 16.89%;
+
+background: #4E626D;
+    }
+
+    .fotoperfil{
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        left: 55px;
+        top: 13px;
+    }
