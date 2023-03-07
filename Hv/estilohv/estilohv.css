@@ -1,0 +1,44 @@
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        max-width: 500px;
+        margin: auto;
+        min-height: 100%;
+        background-attachment: fixed;
+        background-size: cover;
+        display: table-cell;
+        vertical-align: middle;
+    
+    }
+
+    
+.nombre {
+    position: absolute;
+    width: calc(100% - 581px/2 + 74.5px);
+    /* height: 168px; */
+    left: calc(21% - 581px/2 + 74.5px);
+    top: calc(65% - 59px/2 - 421.5px);
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 55px;
+    text-align: center;
+    color: #000000;
+    text-shadow: 0px 4px 0px #ffffff;
+
+}
+
+
+    .s1{
+        /* Vector */
+
+
+position: absolute;
+left: 2.15%;
+right: 72.71%;
+top: 1.76%;
+bottom: 14.45%;
+
+background: #86A7BB;
+    }
