@@ -13,19 +13,64 @@
 
     
 .nombre {
+
     position: absolute;
-    width: calc(100% - 581px/2 + 74.5px);
+    left: 30%;
+    right: 0%;
+    top: 3.42%;
+    bottom: 90.43%;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 41.8446px;
+    line-height: 150%;
+    /* identical to box height, or 63px */
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.011em;
+    
+    color: #4E626D;
+
+}
+
+.secarrera {
+  
+
+    box-sizing: border-box;
+    position: absolute;
+    width: calc(50% - 581px/2 + 74.5px);
+    height: 333px;
+    left: calc(30% - 581px/2 + 74.5px);
+    top: calc(73% - 59px/2 - 421.5px);
+    border-radius: 20px;
+
+}
+
+.carrera {
+    
+
+    position: absolute;
+    width: calc(146% - 581px/2 + 74.5px);
     /* height: 168px; */
-    left: calc(21% - 581px/2 + 74.5px);
-    top: calc(65% - 59px/2 - 421.5px);
+    left: calc(80% - 581px/2 + 74.5px);
+    top: calc(76% - 59px/2 - 421.5px);
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 28px;
-    line-height: 55px;
+    font-size: 20px;
+    line-height: 46px;
     text-align: center;
     color: #000000;
-    text-shadow: 0px 4px 0px #ffffff;
+}
+
+.hcarrera {
+
+    text-align: justify;
+    color:#4e626d;
+    text-shadow: 2px 2px 3px black;
 
 }
 
@@ -45,6 +90,7 @@ background: #86A7BB;
 
     .h1{
         position: absolute;
+        width: 270px;
 left: 3.96%;
 right: 74.72%;
 top: 3.61%;
@@ -57,6 +103,6 @@ background: #4E626D;
         position: absolute;
         width: 200px;
         height: 200px;
-        left: 55px;
+        left: 38px;
         top: 13px;
     }
