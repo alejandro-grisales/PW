@@ -1,25 +1,47 @@
-body{
-    table-layout: auto;
-    font-family: Arial, Helvetica, sans-serif;
-    align-content: center;
-    text-align: justify;
-    background-color:cornflowerblue;
-    color:black;
-  }
-p{
-    text-align: justify;
-    font-size: 14Px;
-    font-family: Arial, Helvetica, sans-serif;
-
+* {
+  box-sizing: border-box;
 }
-
-ul {
-    list-style-type: decimal;
-  }
-
-  h1{
-    color: chartreuse;
-  }
-
-
-
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+h2 {
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 30px;
+  padding: 10px;
+  text-align: center;
+  text-shadow: 2PX 2PX 5PX #080808;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 30px;
+}
+.card {
+  background-color: #0ebfd6;
+  border-radius: 35px;
+  box-shadow: 0 2px 4px rgba(46, 1, 66, 0.774);
+  margin: 20px;
+  max-width: 400px;
+  padding: 25px;
+  text-align: justify;
+}
+.card h3 {
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 0;
+  
+}
+.card p {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 20px 0;
+}
