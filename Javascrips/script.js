@@ -62,105 +62,165 @@ function imprimir() {
 
 
 function verificarPrimo() {
-  const numero = parseInt(document.getElementById("numero").value);
+  var numero = parseInt(document.getElementById("numero").value);
+  var esPrimo = true;
 
-  if (numero > 1) {
-    let esPrimo = true;
+  if (numero <= 1) {
+    document.getElementById("resultado").innerHTML = "El número debe ser mayor que 1.";
+    return;
+  }
 
-    for (let i = 2; i < numero / 2; i++) {
-      if (numero % i === 0) {
-        esPrimo = false;
-        break;
-      }
+  for (var i = 2; i <= Math.sqrt(numero); i++) {
+    if (numero % i === 0) {
+      esPrimo = false;
+      break;
     }
+  }
 
-    if (esPrimo) {
-      console.log(numero + " es un número primo.");
-    } else {
-      console.log(numero + " no es un número primo.");
-    }
+  if (esPrimo) {
+    document.getElementById("resultado").innerHTML = "El número " + numero + " es primo.";
   } else {
-    console.log("El número debe ser mayor que 1.");
+    document.getElementById("resultado").innerHTML = "El número " + numero + " no es primo.";
   }
 }
 
-function sumarNumeros() {
-  let suma = 0;
-  let contador = 0;
 
-  while (suma <= 50) {
-    const numero = parseInt(prompt("Introduce un número"));
-    suma += numero;
+function calculateFactorial() {
+  var numberInput = document.getElementById("number");
+  var resultOutput = document.getElementById("result");
+
+  var number = parseInt(numberInput.value);
+
+  if (isNaN(number) || number <= 0) {
+    resultOutput.textContent = "Please enter a positive integer.";
+  } else {
+    var factorial = 1;
+
+    for (var i = number; i >= 1; i--) {
+      factorial *= i;
+    }
+
+    resultOutput.textContent = "!" + number + " = " + factorial;
+  }
+}
+
+
+function sumarNumeros() {
+  var total = 0;
+  var contador = 0;
+
+  while (total <= 50) {
+    var numero = parseFloat(prompt("Introduce un número:"));
+
+    if (isNaN(numero)) {
+      alert("El valor introducido no es un número válido. Inténtalo de nuevo.");
+      continue;
+    }
+
+    total += numero;
     contador++;
   }
 
-  console.log(`La suma total es ${suma}`);
-  console.log(`Se introdujeron ${contador} números`);
+  alert("La suma total es: " + total);
+  alert("Se han introducido " + contador + " números.");
 }
-function multiplicarNumeros() {
-  const numeros = [2, 5, 7, 10, 12];
-  const pares = [];
-  const impares = [];
 
-  for (let i = 0; i < numeros.length; i++) {
-    const numero = numeros[i];
-    const random = Math.floor(Math.random() * 10) + 1;
-    const resultado = numero * random;
 
-    console.log(`${numero} x ${random} = ${resultado}`);
+function clasificarNumeros() {
+  // Crear el primer array solicitando al usuario que ingrese 5 números
+  var numeros = [];
+  for (var i = 0; i < 5; i++) {
+    var numero = parseInt(prompt("Ingresa un número:"));
+    numeros.push(numero);
+  }
+
+  // Crear los arrays pares e impares
+  var pares = [];
+  var impares = [];
+
+  // Multiplicar los números y clasificarlos en los arrays correspondientes
+  numeros.forEach(function (numero) {
+    var aleatorio = Math.floor(Math.random() * 10) + 1; // Generar número aleatorio entre 1 y 10
+    var resultado = numero * aleatorio;
+
+    console.log(numero + ' x ' + aleatorio + ' = ' + resultado);
 
     if (resultado % 2 === 0) {
       pares.push(resultado);
     } else {
       impares.push(resultado);
     }
-  }
+  });
 
-  console.log("Array de pares:", pares);
-  console.log("Array de impares:", impares);
+  // Mostrar los arrays de pares e impares
+  console.log('Array de pares:', pares);
+  console.log('Array de impares:', impares);
+
 }
+
+
+
 function calcularLetraDNI() {
-  const letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+  var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
 
-  const dni = parseInt(prompt("Introduce el número de DNI"));
+  var numeroDNI = parseInt(prompt("Introduce el número de DNI:"));
 
-  if (dni < 0 || dni > 99999999) {
-    console.log("El número de DNI no es válido");
+  // Validar el número de DNI
+  if (isNaN(numeroDNI) || numeroDNI < 0 || numeroDNI > 99999999) {
+    alert("El número de DNI no es válido.");
     return;
   }
 
-  const indiceLetra = dni % 23;
-  const letraDNI = letras[indiceLetra];
+  var posicionLetra = numeroDNI % 23;
+  var letraDNI = letras[posicionLetra];
 
-  console.log(`La letra correspondiente al número de DNI ${dni} es ${letraDNI}`);
+  alert("La letra correspondiente al número de DNI " + numeroDNI + " es: " + letraDNI);
 }
-function contarConsonantesVocales() {
-  const palabra = prompt("Introduce una palabra");
-  const longitud = palabra.length;
-  let contadorConsonantes = 0;
-  let contadorVocales = 0;
 
-  for (let i = 0; i < longitud; i++) {
-    const letra = palabra[i].toLowerCase();
 
-    if (letra.match(/[a-z]/)) {
-      if (letra.match(/[aeiou]/)) {
-        contadorVocales++;
-      } else {
-        contadorConsonantes++;
-      }
+
+
+function analizarPalabra() {
+  var palabra = prompt("Introduce una palabra:");
+
+  // Convertir la palabra a minúsculas para facilitar el análisis
+  palabra = palabra.toLowerCase();
+
+  var longitud = palabra.length;
+  var vocales = 0;
+  var consonantes = 0;
+
+  // Recorrer cada letra de la palabra
+  for (var i = 0; i < longitud; i++) {
+    var letra = palabra.charAt(i);
+
+    // Verificar si la letra es una vocal
+    if (letra === 'a' || letra === 'e' || letra === 'i' || letra === 'o' || letra === 'u') {
+      vocales++;
+    } else {
+      consonantes++;
     }
   }
 
-  console.log(`La palabra "${palabra}" tiene ${contadorConsonantes} consonantes, ${contadorVocales} vocales y una longitud de ${longitud}`);
+  console.log("Palabra: " + palabra);
+  console.log("Longitud: " + longitud);
+  console.log("Vocales: " + vocales);
+  console.log("Consonantes: " + consonantes);
 }
+
+
+
 function verificarColor() {
-  const colores = ["azul", "amarillo", "rojo", "verde", "rosa"];
-  const colorUsuario = prompt("Introduce un color");
+  var colores = ["azul", "amarillo", "rojo", "verde", "rosa"];
+  var colorUsuario = prompt("Introduce un color:");
+
+  // Convertir el color introducido a minúsculas para facilitar la comparación
+  colorUsuario = colorUsuario.toLowerCase();
 
   if (colores.includes(colorUsuario)) {
-    console.log(`${colorUsuario} se encuentra dentro del array`);
+    console.log("El color " + colorUsuario + " se encuentra en el array.");
   } else {
-    console.log(`${colorUsuario} no se encuentra dentro del array`);
+    console.log("El color " + colorUsuario + " no se encuentra en el array.");
   }
 }
+

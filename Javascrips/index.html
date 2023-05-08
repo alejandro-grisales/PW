@@ -24,7 +24,7 @@
     <button onclick="calcularEdad()">Mostrar</button>
 
 
-    </div>
+  </div>
 
 
   <div class="container">
@@ -46,66 +46,77 @@
     <input type="number" id="numero">
     <button onclick="imprimir()">Imprimir</button>
 
-    
+
 
   </div>
-  
+
 
   <div class="container">
 
     <h1>Verificación de Número Primo</h1>
 
-    <label for="numero">Número:</label>
+    <label for="numero">Ingrese un número entero mayor que 1:</label>
     <input type="number" id="numero">
-  
     <button onclick="verificarPrimo()">Verificar</button>
-  
+    <p id="resultado"></p>
 
   </div>
 
   <div class="container">
-    <h1>Impresión de El factoria</h1>
-    <button onclick="sumarNumeros()">Imprimir</button>
+    <h1>Factorial Calculator</h1>
+    <label for="number">Enter a positive integer:</label>
+    <input type="number" id="number" min="1">
+    <button onclick="calculateFactorial()">Calculate</button>
+    <p id="result"></p>
 
-    
 
-  </div>
-  <div class="container">
 
-    <h1>Impresión de cantidad de nuemros introducidos</h1>
-    <button onclick="multiplicarNumeros()">Imprimir</button>
+    <div class="container">
+      <h1>Sumar hasta 50</h1>
+      <button onclick="sumarNumeros()">Sumar números</button>
 
-    
+    </div>
 
-  </div>
+    <div class="container">
 
-  <div class="container">
+      <h1>Clasificación de números</h1>
+      <button onclick="clasificarNumeros()">Clasificar números</button>
 
-    <h1>Impresión de Array</h1>
-    <button onclick="calcularLetraDNI()">Imprimir</button>
 
-    
 
-  </div>
+    </div>
 
-  <div class="container">
+    <div class="container">
 
-    <h1>Impresión de que letra le corresponde al numero</h1>
-    <button onclick="contarConsonantesVocales()">Imprimir</button>
+      <h1>Calculadora de letra DNI</h1>
+      <button onclick="calcularLetraDNI()">Calcular letra DNI</button>
 
-    
 
-  </div>
 
-  <div class="container">
 
-    <h1>Impresión de Pares e Impares</h1>
-    <button onclick="verificarColor()">Imprimir</button>
+    </div>
 
-    
+    <div class="container">
 
-  </div>
+      <h1>Análisis de palabra</h1>
+      <button onclick="analizarPalabra()">Analizar palabra</button>
 
-  <script src="script.js"></script>
+
+
+
+    </div>
+
+
+    <div class="container">
+      <h1>Verificación de color</h1>
+      <button onclick="verificarColor()">Verificar color</button>
+
+
+
+
+
+    </div>
+
+    <script src="script.js"></script>
 
 </html>
