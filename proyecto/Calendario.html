@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Agendamiento de Citas</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Agendamiento de Citas de Taller de Vehículos</h1>
+        <div id="appointmentModal" class="modal">
+      
+            <div class="modal-content">
+                <h2>Agendar Cita</h2>
+                <div class="form-row">
+                    <label for="name" class="input-label">Nombre del Cliente:</label>
+                    <input type="text" id="name" class="input-field" required>
+                </div>
+                <div class="form-row">
+                    <label for="brand" class="input-label">Marca del Vehículo:</label>
+                    <input type="text" id="brand" class="input-field" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="model" class="input-label">Modelo del Vehículo:</label>
+                    <input type="text" id="model" class="input-field" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="vehicle" class="input-label">Tipo de Vehículo:</label>
+                    <select id="vehicle" class="input-field" required>
+                        <option value="">Seleccionar</option>
+                        <option value="auto">Auto</option>
+                        <option value="camioneta">Camioneta</option>
+                        <option value="motocicleta">Motocicleta</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label for="service" class="input-label">Tipo de Mantenimiento:</label>
+                    <select id="service" class="input-field" required>
+                        <option value="">Seleccionar</option>
+                        <option value="cambioAceite">Cambio de Aceite</option>
+                        <option value="revisionFrenos">Revisión de Frenos</option>
+                        <option value="cambioNeumaticos">Cambio de Neumáticos</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label for="date" class="input-label">Fecha de la Cita:</label>
+                    <input type="date" id="date" class="input-field" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="time" class="input-label">Hora de la Cita:</label>
+                    <input type="time" id="time" class="input-field" required>
+                </div>
+
+                <div class="form-row">
+                    <button id="submitButton" type="submit" class="submit-button">Agendar</button>
+                    <a href="index.html" class="logout-link button">Cerrar sesión</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="calendar"></div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.5.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

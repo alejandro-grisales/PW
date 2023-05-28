@@ -1,0 +1,210 @@
+.root {
+
+  --sky-blue: hsla(198, 63%, 67%, 1);
+  --celestial-blue: hsla(202, 61%, 54%, 1);
+  --persian-blue: hsla(234, 77%, 43%, 1);
+  --navy-blue: hsla(248, 92%, 25%, 1);
+  --federal-blue: hsla(240, 71%, 19%, 1);
+
+}
+
+
+/* Estilos adicionales para dispositivos móviles */
+@media (max-width:900px) {
+  body {
+    font-size: 16px;
+    /* Estilos adicionales para el body en dispositivos móviles */
+  }
+
+  #calendar {
+    max-width: 100%;
+    /* Hacer que el calendario ocupe todo el ancho en dispositivos móviles */
+  }
+
+  .modal-content {
+    width: 90%;
+    max-width: 450px;
+    /* Ajusta el ancho máximo del formulario modal en dispositivos móviles */
+  }
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #314763;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: #ffffff;
+  border-radius: 2%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  width: 400px;
+  
+}
+
+h1 {
+  flex: content;
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #1302ff;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+  background-color: #f2f2f2;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+
+.form-row {
+  margin-bottom: 15px;
+}
+
+.input-label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #250472;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+  text-transform: uppercase
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.submit-button, .logout-link {
+  flex-grow: 1;
+  margin-right: 10px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-button:hover, .logout-link:hover {
+  background-color: #06eeee;
+}
+
+
+/* Estilos para el formulario modal */
+.modal-content {
+  width: 80%;
+  max-width: 2440px;
+  /* Ajusta el ancho máximo del formulario modal según tus necesidades */
+  margin: 0 auto;
+}
+
+
+
+
+/* Estilos para el contenedor del calendario */
+#calendar {
+  width: 100%;
+  height: 600px;
+}
+
+
+
+/* Estilos para el título de la barra de herramientas */
+.fc-toolbar h2 {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Estilos para los eventos del calendario */
+.fc-event {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Estilos para los días seleccionados en el calendario */
+.fc-day.selected {
+  background-color: #0a0a0a;
+  border: 1px solid #250472;
+}
+
+/* Estilos para los botones de navegación del calendario */
+.fc-prev-button {
+  background-color: #0400ff;
+  color: #030303;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.fc-next-button {
+  background-color: #0400ff;
+  color: #030303;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Estilos para los días del calendario */
+.fc-daygrid-day-frame {
+  min-height: 100%;
+  position: relative;
+  background-color: #ffffff;
+  
+}
+
+.fc-daygrid-day-frame :hover {
+  min-height: 100%;
+  position: relative;
+  background-color: #131212;
+  border-radius: 5%;
+  
+}
+
+/* Estilos para el flujo de texto de izquierda a derecha */
+.fc-direction-ltr {
+  direction: ltr;
+}
+
+/* Estilos para los eventos del día en el calendario */
+.fc-daygrid-event {
+  border-radius: 5%;
+  background-color: #0f00e7;
+  border-top-left-radius: 3px;
+}
+
+/* Estilos para el primer evento del día */
+.fc-event-start {
+  margin-right: 2px;
+  color: #ffffff;
+  border-radius: 5%;
+}
+
+.fc-button-primary:disabled {
+  border-top-left-radius: 3px;
+  background-color: var(--persian-bluer);
+  border-color: var(--fc-button-border-color);
+  color: var(--fc-button-text-color);
+}
