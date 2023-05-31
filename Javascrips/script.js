@@ -41,28 +41,26 @@ function calcularArea() {
   }
 }
 
-
 function imprimirParesImpares(numero) {
-  const resultado = document.getElementById("resultado");
-  resultado.innerHTML = ""; // Limpiar el contenido previo
+  const resultadoDiv = document.getElementById("resultadoParesImpares");
+  resultadoDiv.innerHTML = ""; // Limpiar el contenido previo
 
   for (let i = 1; i <= numero; i++) {
     const mensaje = `${i} - es ${i % 2 === 0 ? "par" : "impar"}`;
     const elemento = document.createElement("p");
     elemento.textContent = mensaje;
-    resultado.appendChild(elemento);
+    resultadoDiv.appendChild(elemento);
   }
 }
 
-function imprimir() {
-  const numero = parseInt(document.getElementById('numero').value);
-  imprimirParesImpares(numero);
+
+function imprimir(id) {
+  const numero1 = parseInt(document.getElementById(id).value);
+  imprimirParesImpares(numero1);
 }
 
-
-
-function verificarPrimo() {
-  var numero = parseInt(document.getElementById("numero").value);
+function verificarPrimo(id) {
+  var numero = parseInt(document.getElementById(id).value);
   var esPrimo = true;
 
   if (numero <= 1) {
@@ -84,7 +82,6 @@ function verificarPrimo() {
   }
 }
 
-
 function calculateFactorial() {
   var numberInput = document.getElementById("number");
   var resultOutput = document.getElementById("result");
@@ -92,7 +89,7 @@ function calculateFactorial() {
   var number = parseInt(numberInput.value);
 
   if (isNaN(number) || number <= 0) {
-    resultOutput.textContent = "Please enter a positive integer.";
+    resultOutput.textContent = "Por favor introduzca un número entero positivo.";
   } else {
     var factorial = 1;
 
@@ -143,7 +140,7 @@ function clasificarNumeros() {
     var aleatorio = Math.floor(Math.random() * 10) + 1; // Generar número aleatorio entre 1 y 10
     var resultado = numero * aleatorio;
 
-    console.log(numero + ' x ' + aleatorio + ' = ' + resultado);
+    alert(numero + ' x ' + aleatorio + ' = ' + resultado);
 
     if (resultado % 2 === 0) {
       pares.push(resultado);
@@ -153,10 +150,10 @@ function clasificarNumeros() {
   });
 
   // Mostrar los arrays de pares e impares
-  console.log('Array de pares:', pares);
-  console.log('Array de impares:', impares);
-
+  alert('Array de pares: ' + pares);
+  alert('Array de impares: ' + impares);
 }
+
 
 
 
@@ -202,25 +199,25 @@ function analizarPalabra() {
     }
   }
 
-  console.log("Palabra: " + palabra);
-  console.log("Longitud: " + longitud);
-  console.log("Vocales: " + vocales);
-  console.log("Consonantes: " + consonantes);
+  alert("Palabra: " + palabra);
+  alert("Longitud: " + longitud);
+  alert("Vocales: " + vocales);
+ alert("Consonantes: " + consonantes);
 }
 
 
 
 function verificarColor() {
   var colores = ["azul", "amarillo", "rojo", "verde", "rosa"];
-  var colorUsuario = prompt("Introduce un color:");
+  var colorUsuario = prompt("Introduce uno color:");
 
   // Convertir el color introducido a minúsculas para facilitar la comparación
   colorUsuario = colorUsuario.toLowerCase();
 
   if (colores.includes(colorUsuario)) {
-    console.log("El color " + colorUsuario + " se encuentra en el array.");
+    alert("El color " + colorUsuario + " se encuentra en el array.");
   } else {
-    console.log("El color " + colorUsuario + " no se encuentra en el array.");
+    alert("El color " + colorUsuario + " no se encuentra en el array.");
   }
 }
 

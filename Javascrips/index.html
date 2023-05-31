@@ -4,16 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <TItle>EJERCICIOS JS</TItle>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="..eje_javascripts/script.js">
   <link rel="stylesheet" href="../eje_javascripts/style.css">
-  <title>tarea 2</title>
+
+  <title>Taller 3</title>
 </head>
 
 <body>
   <div class="container">
 
-    <h1>Mostrat Nombre y edad</h1>
+    <h1>Mostrar Nombre y edad</h1>
     <label for="nombre">Nombre:</label>
     <input type="text" id="nombre">
 
@@ -30,40 +32,34 @@
 
     <h1>Calculadora de Áreas</h1>
 
-    <label for="figura">Figura:</label>
+    <label for="figura">Ingrese una de las siguientes figuras: triángulo, rectángulo o círculo.</label>
     <input type="text" id="figura">
 
     <button onclick="calcularArea()">Calcular</button>
   </div>
 
 
-
-  <div class="container">
-
-    <h1>Imprimir números pares e impares</h1>
-    <label for="numero">Introduce un número:</label>
-    <input type="number" id="numero">
-    <button onclick="imprimir()">Imprimir</button>
-
-
-
-  </div>
+<div class="container">
+  <h1>Imprimir números pares e impares</h1>
+  <label for="numero1">Introduce un número:</label>
+  <input type="number" id="numero1">
+  <button onclick="imprimir('numero1')">Imprimir</button>
+  <div id="resultadoParesImpares"></div>
+</div>
 
 
-  <div class="container">
+<div class="container">
+  <h1>Verificación de Número Primo</h1>
+  <label for="numero2">Ingrese un número entero mayor que 1:</label>
+  <input type="number" id="numero2">
+  <button onclick="verificarPrimo('numero2')">Verificar</button>
+  <p id="resultado"></p>
+</div>
 
-    <h1>Verificación de Número Primo</h1>
-
-    <label for="numero">Ingrese un número entero mayor que 1:</label>
-    <input type="number" id="numero">
-    <button onclick="verificarPrimo()">Verificar</button>
-    <p id="resultado"></p>
-
-  </div>
 
   <div class="container">
     <h1>Factorial Calculator</h1>
-    <label for="number">Enter a positive integer:</label>
+    <label for="number">Introduzca un número entero positivo:</label>
     <input type="number" id="number" min="1">
     <button onclick="calculateFactorial()">Calculate</button>
     <p id="result"></p>

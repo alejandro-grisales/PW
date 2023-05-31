@@ -85,6 +85,8 @@ document.addEventListener("DOMContentLoaded", function() {
  calendar.render();
 });
 
+
+
 $(document).ready(function() {
   // Obtener el valor del parámetro "username" de la URL
   var urlParams = new URLSearchParams(window.location.search);
